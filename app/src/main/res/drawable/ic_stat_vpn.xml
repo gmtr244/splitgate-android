@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bildirim simgesi: tek renk (sistem boyar) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M32,4 L6,13 V32 C6,48 18,58 32,62 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M35,2 L58,11 V30 C58,46 46,56 35,60 Z" />
+</vector>

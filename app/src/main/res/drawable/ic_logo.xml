@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bolunmus kalkan: uygulamanin logosu (arayuz basligi icin) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:fillColor="#2EE6A8"
+        android:pathData="M32,4 L6,13 V32 C6,48 18,58 32,62 Z" />
+    <path
+        android:fillColor="#19B88A"
+        android:pathData="M32,2 L58,11 V30 C58,46 46,56 32,60 Z" />
+</vector>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">SNI bölme · şifreli DNS</string>
+    <string name="toggle_cd">Bağlantıyı aç veya kapat</string>
+    <string name="status_off">Bağlı değil</string>
+    <string name="status_on">Bağlı</string>
+    <string name="status_hint">Başlatmak için düğmeye dokun</string>
+
+    <string name="stat_downloaded">İNDİRİLEN</string>
+    <string name="stat_uploaded">GÖNDERİLEN</string>
+    <string name="stat_active">Aktif bağlantı</string>
+    <string name="stat_split">Bölünen</string>
+    <string name="stat_dns">DNS sorgusu</string>
+    <string name="per_second">/sn</string>
+
+    <string name="section_method">YÖNTEM</string>
+    <string name="section_dns">DNS SAĞLAYICISI (DoH)</string>
+    <string name="quic_title">QUIC\'i engelle</string>
+    <string name="quic_desc">UDP 443 düşer, tarayıcılar TCP\'ye geçer</string>
+    <string name="restart_needed">Değişiklik için durdurup tekrar başlat</string>
+    <string name="auto_title">Çalışan yönteme kendisi geçsin</string>
+    <string name="auto_desc">Her bağlanışta ve Wi-Fi ile mobil veri arasında geçişte, seçili yöntem Test kartındaki sitelerde gerçekten denenir. Siteleri açmıyorsa diğer yöntemler denenir; çalışan kullanılır ve o ağ için kaydedilir. Elle seçtiğin yöntem değiştirilmez.</string>
+    <string name="check_checking">Kontrol ediliyor…</string>
+    <string name="check_working">Çalışıyor</string>
+    <string name="check_not_blocked">Bağlı, siteler engelli değil</string>
+    <string name="check_failed">Bu ağda çalışmıyor</string>
+    <string name="check_sites">%1$s site açılıyor</string>
+    <string name="verdict_works">Burada başka bir yöntem çalışıyor: testi çalıştırıp önerileni uygula.</string>
+    <string name="verdict_not_blocked">Test siteleri bölmeden de açılıyor: bu ağda engelli değiller. Test kartına senin için engelli olan siteleri yaz.</string>
+    <string name="verdict_dns">Şifreli DNS\'e (DoH) ulaşılamıyor, siteler denenemedi. Başka bir DNS sağlayıcısı seç, telefon ayarlarında Özel DNS\'i kapat ya da internet bağlantını kontrol et.</string>
+    <string name="verdict_no_connection">Bu ağda internet bağlantısı yok.</string>
+    <string name="verdict_ip_block">Sitelere düz bağlantı bile kurulamıyor: bu bir IP engeli gibi görünüyor. Bölme bunu aşamaz; yalnızca gerçek bir VPN ya da proxy aşabilir.</string>
+    <string name="verdict_intercepted">Siteler yanlış sertifikayla cevap veriyor: bu ağda bir şey (operatör, modem ya da okul/şirket filtresi) bağlantının arasına giriyor. Bölme bunu aşamaz.</string>
+    <string name="verdict_dpi">Bağlantı kuruluyor ama filtre bu ağda her yöntemi yakalıyor. İncelenmesi için rapor gönder.</string>
+    <string name="preset_disorder">Sıra bozma</string>
+    <string name="preset_disorder_desc">1. bayttan böler; ilk parça TTL 1 ile gider, filtreye varmadan ölür ve yeniden gönderilir. Sunucuya parçalar sırasız ulaşır.</string>
+    <string name="preset_disordersni">Sıra bozma (site adı)</string>
+    <string name="preset_disordersni_desc">Alan adının ortasından böler; ilk parça TTL 1 ile gider, sonra yeniden gönderilir.</string>
+    <string name="preset_tlsdisorder">TLS + sıra bozma</string>
+    <string name="preset_tlsdisorder_desc">Site adının ortasından iki TLS kaydı; ilki TTL 1 ile gider, sonra yeniden gönderilir.</string>
+    <string name="err_connect_timeout">bağlanılamadı (zaman aşımı)</string>
+    <string name="err_reset">bağlantı sıfırlandı</string>
+    <string name="err_refused">bağlantı reddedildi</string>
+    <string name="err_unreachable">ağa ulaşılamıyor</string>
+    <string name="err_closed">bağlantı kapatıldı</string>
+    <string name="report_info">Çalışmazsa rapor gönder. Raporda ağın ve operatörün, ayarlar ve son test sonuçları bulunur. Girdiğin siteler bulunmaz, yalnızca yukarıdaki test kutusundaki siteler bulunur. Gönderilmeden önce görürsün.</string>
+    <string name="report_send">Rapor gönder</string>
+    <string name="report_share">Paylaş</string>
+    <string name="report_subject">SplitGate %1$s raporu</string>
+    <string name="report_no_mail">E-posta uygulaması bulunamadı, başka bir uygulama seç</string>
+    <string name="report_note_title">Sorun ne?</string>
+    <string name="report_note_hint">Örn. Discord açılmıyor, Türk Telekom fiber, ev Wi-Fi\'ı. Hangi siteler ya da uygulamalar, ne zamandan beri?</string>
+    <string name="nets_title">Ağa göre kayıtlı:</string>
+    <string name="nets_none">Henüz hiçbir ağ için yöntem kaydedilmedi. Her ağda bir yöntem seç ya da testi çalıştır.</string>
+    <string name="nets_manual">" (elle)"</string>
+    <string name="nets_auto">" (otomatik)"</string>
+    <string name="nets_forget">Kayıtlı ağları unut</string>
+    <string name="nets_forgotten">Kayıtlı ağlar unutuldu</string>
+    <string name="net_mobile">Mobil</string>
+    <string name="net_other">Diğer ağ</string>
+
+    <string name="preset_none">Sadece DNS</string>
+    <string name="preset_none_desc">Yalnızca şifreli DNS (DoH). ClientHello bölünmez.</string>
+    <string name="preset_hafif">Hafif</string>
+    <string name="preset_hafif_desc">Yalnızca alan adının ortasından tek bölme.</string>
+    <string name="preset_sni">SNI başı</string>
+    <string name="preset_sni_desc">1. bayttan ve SNI\'nin başlangıcından böler.</string>
+    <string name="preset_agresif">Agresif</string>
+    <string name="preset_agresif_desc">Çok parçalı bölme (1, 3, SNI başı, alan adı ortası, SNI sonu).</string>
+    <string name="preset_oob">OOB baytlı</string>
+    <string name="preset_oob_desc">1. bayttan ve alan adının ortasından böler, ilk parçadan sonra 1 bayt OOB (urgent) gönderir.</string>
+    <string name="preset_tlskayit">TLS + TCP böl</string>
+    <string name="preset_tlskayit_desc">ClientHello site adının ortasından iki TLS kaydına bölünür ve iki TCP parçası olarak gönderilir.</string>
+
+    <string name="section_test">TEST</string>
+    <string name="test_info">Her yöntemi bu ağda, aşağıdaki sitelerde gerçek bir TLS el sıkışmasıyla dener. Senin için engelli olan siteleri yaz; varsayılanlar yalnızca örnektir.</string>
+    <string name="test_domains_hint">siteler, örn. discord.com, x.com</string>
+    <string name="test_bad_domain">Geçerli bir site adı değil: %1$s</string>
+    <string name="test_run">Yöntemleri dene</string>
+    <string name="test_running">Deneniyor…</string>
+    <string name="test_starting">Başlıyor…</string>
+    <string name="test_progress">Deneniyor: %1$s</string>
+    <string name="test_recommended">Önerilen: %1$s</string>
+    <string name="test_none">Hiçbir yöntem alan adı açamadı</string>
+    <string name="test_apply">Önerileni uygula</string>
+    <string name="test_error">Test çalıştırılamadı: %1$s</string>
+    <string name="test_baseline_err">Bölmesiz %1$s: %2$s</string>
+    <string name="err_timeout">zaman aşımı</string>
+    <string name="err_certificate">sertifika doğrulanamadı</string>
+    <string name="err_hostname">sertifika alan adıyla eşleşmiyor</string>
+
+    <string name="section_privacy">GİZLİLİK</string>
+    <string name="privacy_text">DNS sorguların şifrelenir (DoH). Site trafiği aracı bir sunucuya gitmez, doğrudan çıkar; HTTPS siteler zaten kendi şifrelemesini kullanır. Bu uygulama bir gizlilik VPN\'i değildir: operatör hangi IP\'lere bağlandığını görmeye devam eder.</string>
+
+    <string name="section_log">GÜNLÜK</string>
+    <string name="log_copy">Kopyala</string>
+    <string name="log_clear">Temizle</string>
+    <string name="log_copied">Günlük panoya kopyalandı</string>
+
+    <string name="notif_denied">Bildirim izni verilmedi: durum bildirimi görünmeyecek</string>
+    <string name="notif_channel">Bağlantı durumu</string>
+    <string name="notif_title">SplitGate · %1$s · %2$s</string>
+    <string name="notif_detail">İndirilen: %1$s  (%2$s)\nGönderilen: %3$s  (%4$s)</string>
+    <string name="notif_stop">Durdur</string>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">SplitGate</string>
+    <string name="copyright" translatable="false">© 2026 Project Gamers · GPL-3.0-or-later</string>
+    <string name="choose_language" translatable="false">Choose your language / Dilinizi seçin</string>
+
+    <string name="tagline">SNI splitting · encrypted DNS</string>
+    <string name="toggle_cd">Turn the connection on or off</string>
+    <string name="status_off">Not connected</string>
+    <string name="status_on">Connected</string>
+    <string name="status_hint">Tap the button to start</string>
+
+    <string name="stat_downloaded">DOWNLOADED</string>
+    <string name="stat_uploaded">UPLOADED</string>
+    <string name="stat_active">Active connections</string>
+    <string name="stat_split">Split</string>
+    <string name="stat_dns">DNS queries</string>
+    <string name="per_second">/s</string>
+
+    <string name="section_method">METHOD</string>
+    <string name="section_dns">DNS PROVIDER (DoH)</string>
+    <string name="quic_title">Block QUIC</string>
+    <string name="quic_desc">UDP 443 is dropped, browsers fall back to TCP</string>
+    <string name="restart_needed">Stop and start again for the change to apply</string>
+    <string name="auto_title">Switch to a working method by itself</string>
+    <string name="auto_desc">Every time you connect or switch between Wi-Fi and mobile data, the chosen method is really tried on the sites in the Test card. If it does not open them, the other methods are tried and the one that works is used and saved for that network. A method you picked by hand is never changed.</string>
+    <string name="check_checking">Checking…</string>
+    <string name="check_working">Working</string>
+    <string name="check_not_blocked">Connected, sites not blocked</string>
+    <string name="check_failed">Not working on this network</string>
+    <string name="check_sites">%1$s sites open</string>
+    <string name="verdict_works">Another method works here: run the test and apply the recommended one.</string>
+    <string name="verdict_not_blocked">The test sites open without splitting: they are not blocked on this network. Put sites that are blocked for you in the Test card.</string>
+    <string name="verdict_dns">Encrypted DNS (DoH) cannot be reached, so the sites could not be tried. Pick another DNS provider, turn off Private DNS in the phone settings, or check your internet connection.</string>
+    <string name="verdict_no_connection">No internet connection on this network.</string>
+    <string name="verdict_ip_block">Even a plain connection to the sites is not possible: this looks like an IP block. Splitting cannot get around it; only a real VPN or proxy can.</string>
+    <string name="verdict_intercepted">The sites answer with a wrong certificate: something on this network (operator, modem or school/company filter) intercepts the connection. Splitting cannot get around it.</string>
+    <string name="verdict_dpi">The connection is made but the filter catches every method on this network. Send a report so it can be looked at.</string>
+    <string name="preset_disorder">Disorder</string>
+    <string name="preset_disorder_desc">Splits at byte 1 and sends the first piece with TTL 1, so it dies before the filter and is resent; the server gets the pieces out of order.</string>
+    <string name="preset_disordersni">Disorder (site name)</string>
+    <string name="preset_disordersni_desc">Splits in the middle of the domain name; the first piece is sent with TTL 1 and resent later.</string>
+    <string name="preset_tlsdisorder">TLS + disorder</string>
+    <string name="preset_tlsdisorder_desc">Two TLS records cut in the middle of the site name; the first one is sent with TTL 1 and resent later.</string>
+    <string name="err_connect_timeout">could not connect (timed out)</string>
+    <string name="err_reset">connection was reset</string>
+    <string name="err_refused">connection refused</string>
+    <string name="err_unreachable">network unreachable</string>
+    <string name="err_closed">connection was closed</string>
+    <string name="report_info">If it does not work, send a report. It contains your network and operator, the settings and the last test results. It does not contain the sites you visit, only the sites in the test box above. You see it before it is sent.</string>
+    <string name="report_send">Send report</string>
+    <string name="report_share">Share</string>
+    <string name="report_subject">SplitGate %1$s report</string>
+    <string name="report_no_mail">No e-mail app found, choose another app</string>
+    <string name="report_note_title">What is the problem?</string>
+    <string name="report_note_hint">e.g. Discord does not open, Türk Telekom fiber, home Wi-Fi. Which sites or apps, since when?</string>
+    <string name="nets_title">Saved per network:</string>
+    <string name="nets_none">No method saved for any network yet. Pick a method or run the test on each network.</string>
+    <string name="nets_manual">" (by hand)"</string>
+    <string name="nets_auto">" (auto)"</string>
+    <string name="nets_forget">Forget saved networks</string>
+    <string name="nets_forgotten">Saved networks forgotten</string>
+    <string name="net_mobile">Mobile</string>
+    <string name="net_other">Other network</string>
+
+    <string name="preset_none">DNS only</string>
+    <string name="preset_none_desc">Encrypted DNS (DoH) only. The ClientHello is not split.</string>
+    <string name="preset_hafif">Light</string>
+    <string name="preset_hafif_desc">A single split in the middle of the domain name.</string>
+    <string name="preset_sni">SNI start</string>
+    <string name="preset_sni_desc">Splits at byte 1 and at the start of the SNI.</string>
+    <string name="preset_agresif">Aggressive</string>
+    <string name="preset_agresif_desc">Many-piece split (1, 3, SNI start, middle of the domain, SNI end).</string>
+    <string name="preset_oob">OOB byte</string>
+    <string name="preset_oob_desc">Splits at byte 1 and in the middle of the domain name, then sends 1 OOB (urgent) byte after the first piece.</string>
+    <string name="preset_tlskayit">TLS + TCP split</string>
+    <string name="preset_tlskayit_desc">The ClientHello is cut in the middle of the site name into two TLS records, sent as two TCP pieces.</string>
+
+    <string name="section_test">TEST</string>
+    <string name="test_info">Tries every method on this network with a real TLS handshake against the sites below. Use sites that are blocked for you; the defaults are only examples.</string>
+    <string name="test_domains_hint">sites, e.g. discord.com, x.com</string>
+    <string name="test_bad_domain">Not a valid site name: %1$s</string>
+    <string name="test_run">Try methods</string>
+    <string name="test_running">Testing…</string>
+    <string name="test_starting">Starting…</string>
+    <string name="test_progress">Testing: %1$s</string>
+    <string name="test_recommended">Recommended: %1$s</string>
+    <string name="test_none">No method could open any domain</string>
+    <string name="test_apply">Apply recommended</string>
+    <string name="test_error">The test could not run: %1$s</string>
+    <string name="test_baseline_err">Without splitting %1$s: %2$s</string>
+    <string name="err_timeout">timed out</string>
+    <string name="err_certificate">certificate could not be verified</string>
+    <string name="err_hostname">certificate does not match the host name</string>
+
+    <string name="section_privacy">PRIVACY</string>
+    <string name="privacy_text">Your DNS queries are encrypted (DoH). Site traffic does not go to an intermediary server, it leaves directly; HTTPS sites already use their own encryption. This app is not a privacy VPN: your carrier can still see which IP addresses you connect to.</string>
+
+    <string name="section_log">LOG</string>
+    <string name="log_copy">Copy</string>
+    <string name="log_clear">Clear</string>
+    <string name="log_copied">Log copied to the clipboard</string>
+
+    <string name="notif_denied">Notification permission was not granted: the status notification will not appear</string>
+    <string name="notif_channel">Connection status</string>
+    <string name="notif_title">SplitGate · %1$s · %2$s</string>
+    <string name="notif_detail">Downloaded: %1$s (%2$s)\nUploaded: %3$s (%4$s)</string>
+    <string name="notif_stop">Stop</string>
+</resources>
